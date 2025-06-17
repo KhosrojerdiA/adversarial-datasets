@@ -1,4 +1,4 @@
-# RAG-Generated Augmented Datasets for Document Rank Boosting in Information Retrieval
+# Datasets for Supervised Adversarial Attacks on Neural Rankers
 
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/) [![Documentation Status](https://readthedocs.org/projects/ansicolortags/badge/?version=latest)](http://ansicolortags.readthedocs.io/?badge=latest)
 
