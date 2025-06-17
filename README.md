@@ -17,7 +17,7 @@ To implement our Retrieval-Augmented Generation (RAG) based adversarial dataset 
 
 **Please check prompts folder to see our LLM Prompts**
 
-**You can check the datasets in datasets folder**
+**You can check the datasets in datasets folder** 
 
 ## Abstract
 
