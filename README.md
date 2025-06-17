@@ -15,9 +15,9 @@ In this paper, we explore adversarial rank attacks on Neural Ranking Models (NRM
 
 To implement our Retrieval-Augmented Generation (RAG) based adversarial dataset construction, we leveraged Qwen3 32B,a state-of-the-art large language model (LLM) optimized for complex language understanding and generation with chain of thoughts. The model was selected due to its strong performance in generating semantically coherent, reasoning, context-aware adversarial modifications while maintaining fluency and linguistic integrity. Below, we outline the key components of our implementation pipeline.
 
-**Please check prompts folder to see our LLM Prompts**
+**- Please check prompts folder to see our LLM Prompts**
 
-**You can check the datasets in datasets folder** 
+**- You can check the datasets in datasets folder** 
 
 ## Abstract
 
