@@ -109,10 +109,11 @@ Our datasets are categorized as follows:
 
 ## Table 3: Performance comparison across baselines and ours.
 We evaluate our approach against state-of-the-art adversarial ranking techniques, including:
-- Query Injection (Query+)
-- Embedding Perturbation (EMPRA)
-- Trigger-Based Attacks (PAT, Brittle-BERT)
-- Sentence-Level Attacks (IDEM)
+- Token-Level perturbation (PRADA)
+- Trigger-Based Attacks (Brittle-BERT, PAT)
+- Prompt-Based (IDEM)
+- Sentence-Level Perturbation (EMPRA)
+
 
 | Model         | Easy-5 ASR | %r ≤ 10 | %r ≤ 50 | Boost | PPL  | Hard-5 ASR | %r ≤ 10 | %r ≤ 50 | Boost | PPL  |
 |---------------|------------|---------|---------|-------|------|-------------|----------|----------|--------|------|
