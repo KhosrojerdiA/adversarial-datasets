@@ -9,11 +9,11 @@
 
 This repository contains the code, datasets, and experimental results associated with our paper:
 
-"RAG-Based Datasets for Adversarial Rank Attacks Against Neural Rankers"
+"Datasets for Supervised Adversarial Attacks on Neural Rankers"
 
 In this paper, we explore adversarial rank attacks on Neural Ranking Models (NRMs) using a structured framework based on Retrieval-Augmented Generation (RAG). Our approach generates adversarial datasets by strategically modifying documents with adversarially generated sentences to manipulate ranking results in Information Retrieval (IR) systems.
 
-To implement our Retrieval-Augmented Generation (RAG) based adversarial dataset construction, we leveraged Qwen3 32B,a state-of-the-art large language model (LLM) optimized for complex language understanding and generation with chain of thoughts. The model was selected due to its strong performance in generating semantically coherent, context-aware adversarial modifications while maintaining fluency and linguistic integrity. Below, we outline the key components of our implementation pipeline.
+To implement our Retrieval-Augmented Generation (RAG) based adversarial dataset construction, we leveraged Qwen3 32B,a state-of-the-art large language model (LLM) optimized for complex language understanding and generation with chain of thoughts. The model was selected due to its strong performance in generating semantically coherent, reasoning, context-aware adversarial modifications while maintaining fluency and linguistic integrity. Below, we outline the key components of our implementation pipeline.
 
 ** Please check prompts folder to see our LLM Prompts **
 
@@ -39,6 +39,11 @@ conda activate rag_attack_env
 pip install -r requirements.txt
 ```
 
+## Run
+To run the code, you can use main_no_think_v2.py for no reasoning LLM. It will save the result on output folder. 
+Then you can run main_think_v2.py that will run the reasoning LLM for those query-documents that did not achieve the goal.
+
+
 ## Source Data
 Following Wu et al., we evaluate our attack methods on a randomly sampled subset of 1,000 queries from the Dev set. For each query, we target two distinct types of documents—Easy-5 and Hard-5—selected from the re-ranked results produced by the victim neural ranking model (NRM) after applying it to the top-1K BM25 candidates. This dual-target approach allows us to systematically assess the impact of our rank boosting techniques on documents with varying levels of initial ranking quality.
 
@@ -61,19 +66,18 @@ Our datasets are categorized as follows:
 - Perplexity: A measure of text fluency, with lower values indicating more predictable and coherent language after augmentation.
 - Acceptability Score: A measure of perceived text quality, reflecting how natural or readable the augmented document is compared to the original document.
 
-## Table 1: Gold dataset statistics: original vs. adversarial documents with per-position breakdown for Easy-5 and Hard-5.
+## Table 1: Gold Dataset statistics over Easy-5 and Hard-5.
 
 ![](images/Slide2.png)
 <p align="center"><em></em></p>
 
-## Table 2: Diamondom dataset statistics: original vs. adversarial documents with per-position breakdown for Easy-5 and Hard-5.
+## Table 2: Diamond Dataset statistics over Easy-5 and Hard-5.
 
 ![](images/Slide3.png)
 <p align="center"><em></em></p>
 
 
-
-## Table 3: Performance Comparison of Different Models on Easy-5 and Hard-5.
+## Table 3: Performance comparison across baselines and ours.
 We evaluate our approach against state-of-the-art adversarial ranking techniques, including:
 - Query Injection (Query+)
 - Embedding Perturbation (EMPRA)
